@@ -12,6 +12,7 @@
   "author": "",
   "license": "MIT",
   "devDependencies": {
+    "@playwright/test": "^1.42.0",
     "nodemon": "^3.0.3",
     "supertest": "^6.3.4"
   },
