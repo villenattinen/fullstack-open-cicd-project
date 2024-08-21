@@ -1,6 +1,6 @@
 # Fullstack-Open CI/CD Project
 
-CI/CD Pipeline Project for University of Helsinki Full Stack Open Course: Part 11 CI/CD exercises.  
+CI/CD Pipeline Project for University of Helsinki Full Stack Open Course: Part 11 CI/CD, exercises 11.20 & 11.21.  
 Based on the Blog App from parts 4-5 of the course.
 
 ## Link to PokeDex CI/CD Exercises (the other repository)
