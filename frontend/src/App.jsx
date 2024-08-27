@@ -1,13 +1,13 @@
-import { useState, useEffect, createRef } from "react"
+import { useState, useEffect, createRef } from 'react'
 
-import blogService from "./services/blogs"
-import loginService from "./services/login"
-import storage from "./services/storage"
-import Login from "./components/Login"
-import Blog from "./components/Blog"
-import NewBlog from "./components/NewBlog"
-import Notification from "./components/Notification"
-import Togglable from "./components/Togglable"
+import blogService from './services/blogs'
+import loginService from './services/login'
+import storage from './services/storage'
+import Login from './components/Login'
+import Blog from './components/Blog'
+import NewBlog from './components/NewBlog'
+import Notification from './components/Notification'
+import Togglable from './components/Togglable'
 
 const App = () => {
   const [blogs, setBlogs] = useState([])
@@ -27,7 +27,7 @@ const App = () => {
 
   const blogFormRef = createRef()
 
-  const notify = (message, type = "success") => {
+  const notify = (message, type = 'success') => {
     setNotification({ message, type })
     setTimeout(() => {
       setNotification(null)
@@ -41,7 +41,7 @@ const App = () => {
       storage.saveUser(user)
       notify(`Welcome back, ${user.name}`)
     } catch (error) {
-      notify("Wrong credentials", "error")
+      notify('Wrong credentials', 'error')
     }
   }
 
@@ -53,7 +53,7 @@ const App = () => {
   }
 
   const handleVote = async (blog) => {
-    console.log("updating", blog)
+    console.log('updating', blog)
     const updatedBlog = await blogService.update(blog.id, {
       ...blog,
       likes: blog.likes + 1,

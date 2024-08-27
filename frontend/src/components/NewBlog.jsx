@@ -1,9 +1,9 @@
-import React, { useState } from "react"
+import React, { useState } from 'react'
 
 const NewBlog = ({ doCreate }) => {
-  const [title, setTitle] = useState("")
-  const [url, setUrl] = useState("")
-  const [author, setAuthor] = useState("")
+  const [title, setTitle] = useState('')
+  const [url, setUrl] = useState('')
+  const [author, setAuthor] = useState('')
 
   const handleTitleChange = (event) => {
     setTitle(event.target.value)
@@ -20,9 +20,9 @@ const NewBlog = ({ doCreate }) => {
   const handleSubmit = (event) => {
     event.preventDefault()
     doCreate({ title, url, author })
-    setAuthor("")
-    setTitle("")
-    setUrl("")
+    setAuthor('')
+    setTitle('')
+    setUrl('')
   }
 
   return (

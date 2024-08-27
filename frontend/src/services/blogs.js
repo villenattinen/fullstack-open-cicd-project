@@ -1,7 +1,7 @@
-import axios from "axios"
-import storage from "./storage"
+import axios from 'axios'
+import storage from './storage'
 
-const baseUrl = "/api/blogs"
+const baseUrl = '/api/blogs'
 
 const getConfit = () => ({
   headers: { Authorization: `Bearer ${storage.loadUser().token}` },

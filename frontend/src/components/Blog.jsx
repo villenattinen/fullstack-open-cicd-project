@@ -1,14 +1,14 @@
-import React, { useState } from "react"
-import PropTypes from "prop-types"
-import storage from "../services/storage"
+import React, { useState } from 'react'
+import PropTypes from 'prop-types'
+import storage from '../services/storage'
 
 const Blog = ({ blog, handleVote, handleDelete }) => {
   const [visible, setVisible] = useState(false)
 
-  const nameOfUser = blog.user ? blog.user.name : "anonymous"
+  const nameOfUser = blog.user ? blog.user.name : 'anonymous'
 
   const style = {
-    border: "solid",
+    border: 'solid',
     padding: 10,
     borderWidth: 1,
     marginBottom: 5,
@@ -22,7 +22,7 @@ const Blog = ({ blog, handleVote, handleDelete }) => {
     <div style={style} className='blog'>
       {blog.title} by {blog.author}
       <button style={{ marginLeft: 3 }} onClick={() => setVisible(!visible)}>
-        {visible ? "hide" : "view"}
+        {visible ? 'hide' : 'view'}
       </button>
       {visible && (
         <div>

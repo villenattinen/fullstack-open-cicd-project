@@ -1,12 +1,12 @@
-const bcrypt = require("bcrypt")
-const router = require("express").Router()
-const User = require("../models/user")
+const bcrypt = require('bcrypt')
+const router = require('express').Router()
+const User = require('../models/user')
 
-router.post("/", async (request, response) => {
+router.post('/', async (request, response) => {
   const { username, name, password } = request.body
 
   if (!password || password.length < 3) {
-    return response.status(400).json({ error: "password missing or too short" })
+    return response.status(400).json({ error: 'password missing or too short' })
   }
 
   const saltRounds = 10
@@ -23,8 +23,8 @@ router.post("/", async (request, response) => {
   response.status(201).json(savedUser)
 })
 
-router.get("/", async (request, response) => {
-  const users = await User.find({}).populate("blogs", {
+router.get('/', async (request, response) => {
+  const users = await User.find({}).populate('blogs', {
     url: 1,
     title: 1,
     author: 1,
